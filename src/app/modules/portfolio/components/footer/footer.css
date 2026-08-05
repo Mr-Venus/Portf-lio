@@ -1,0 +1,253 @@
+
+:host {
+  min-width: 100%;
+  height: 100vh;
+  display: block;
+  position: absolute; 
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 7;
+  pointer-events: none; 
+}
+
+.footer-section {
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  position: relative;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  opacity: 0;
+  transform: translateY(200px);
+}
+
+.footer-description {
+    width: 100%;
+    position: absolute;
+
+    top: 10%;
+    left: 0;
+    padding-left: 5%;
+    padding-right: 5%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    z-index: 4;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+
+    letter-spacing: 3px;
+
+    transform: translateX(40px);
+    color: transparent;
+}
+
+.sociais {
+    opacity: 0.9;
+
+    background: linear-gradient(
+        100deg,
+        #f5f5f5 0%,
+        #f5f5f5 50%,
+        #d6a63d 40%,
+        #fff4b5 50%,
+        #d6a63d 51%,
+        #f5f5f5 58%,
+        #f5f5f5 100%
+    );
+
+    background-size: 150% 100%;
+    background-position: -100% 0;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    transition: opacity .8 ease-in-out;
+    
+}
+
+.sociais:hover {
+    opacity: 1; 
+    animation: goldReflection 1.3s ease forwards;
+}
+
+@keyframes goldReflection{
+
+    from{
+
+        background-position:-100%;
+
+    }
+
+    to{
+
+        background-position:170%;
+
+    }
+
+}
+
+
+.description {
+    font-size: .90rem;
+    letter-spacing: 1px;
+    width: 250px;
+    text-align: justify;
+    opacity: .9;
+
+    cursor: default;
+}
+
+
+.image-container{
+
+    position:absolute;
+
+    right:5%;
+    bottom:5%;
+
+    width:420px;
+    height:620px;
+
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    pointer-events: none;
+
+}
+
+
+.text-image{
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/DavidMichelangelo.png');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: color-dodge;
+
+    user-select: none;
+
+    font-family: DM Mono, sans-serif;
+    font-size: .9rem;
+    line-height: .9;
+    text-align: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: #000000c3;
+}
+
+.footer-title {
+    position: absolute;
+    width: 100%;
+    height: 50vh;
+    left: 5%;
+    bottom: 0%;
+    height: max-content;
+    text-transform: uppercase;
+    cursor: default;
+
+    z-index: 3;
+}
+
+.contact {
+    font-family: "League Gothic", sistem-ui;
+    opacity: 0.9;
+
+    transform: translateY(200px);
+
+    
+    font-size: 24rem;
+
+    line-height:.72;
+
+    letter-spacing:-0.09em;
+
+}
+
+.me {
+    font-size:8rem;
+    transform: translateY(200px);
+    padding-left: 50px;
+    color: var(--cor-acento-1);
+}
+
+.footer-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(100%) contrast(150%); 
+}
+
+
+
+@media (max-width: 768px) {
+    .footer-description {
+        height: 100vh;
+        padding: 0;
+    }
+    
+    .description {
+        position: absolute;
+        right: -6%;
+        bottom: 13%;
+    }
+
+    .footer-title {
+        bottom: 35%;
+        left: -28%;
+        rotate: calc(90deg);
+    }
+
+    .title {
+        width: fit-content;
+        height: fit-content;
+        bottom: 0;
+    }
+
+    .contact {
+        
+        font-size: 15rem;
+        line-height:1;
+        letter-spacing:-0.09em;
+        transform: translateY(0px);
+        transform: translateX(200px);
+
+    }
+
+    .me {
+        font-size:5rem;
+        transform: translateY(200px);
+        padding-left: 20px;
+        color: var(--cor-acento-1);
+    }
+
+    .image-container{
+
+        right:-30%;
+        bottom:13%;
+
+        width:360px;
+        height:620px;
+
+    }
+
+}

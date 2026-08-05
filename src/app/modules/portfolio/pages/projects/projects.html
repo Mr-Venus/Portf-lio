@@ -1,0 +1,75 @@
+<section class="projects-section">
+  <div class="projects-wipe-bg"></div>
+
+  <button class="btn-galery" (click)="toggleMenu()">
+    <svg class="search-icon" viewBox="0 0 100 100">
+      <!-- círculo -->
+
+      <circle class="glass" cx="40" cy="40" r="20" />
+
+      <!-- haste -->
+
+      <line class="handle" x1="56" y1="56" x2="76" y2="76" />
+
+      <!-- linha escondida -->
+
+      <line class="cross" x1="76" y1="56" x2="56" y2="76" />
+    </svg>
+  </button>
+  <div class="indicador">
+
+    <div class="janela">
+
+        <span class="project-number">
+            {{ projetoAtual }}
+        </span>
+
+    </div>
+
+    <span class="separador">/</span>
+
+    <span class="project-totais">{{ projetosQnt }}</span>
+
+  </div>
+  <div class="menu-overlay">
+
+    @for (projeto of listaProjetos; track projeto.titulo) {
+
+      <a [href]="projeto.link" target="_blank" class="item-menu">
+        <h1 class="item-titulo">
+          {{ projeto.titulo }}|
+        </h1>
+
+        <img [src]="projeto.imagem" [alt]="projeto.titulo" class="item-imagem" />
+
+        <h1 class="item-titulo">
+          |{{ projeto.tag }}
+        </h1>
+      </a>
+
+    }
+
+  </div>
+
+
+  <div class="projects-content-wrapper">
+    <h2 class="content-title">Projetcs</h2>
+
+
+    <div class="project-showcase-card">
+      <div class="project-image-container">
+        <img [src]="projetoAtivo.imagem" alt="Imagem do Projeto" class="project-img">
+        <a [href]="projetoAtivo.link" target="_blank" class="btn-ver-projeto"> <span>Visitar Projeto</span></a>
+        <div class="tag">
+          <span class="tag-content">{{ projetoAtivo.tag }}</span>
+        </div>
+      </div>
+
+      <div class="project-overlay">
+        <h3 class="project-title">{{ projetoAtivo.titulo }}</h3>
+        <p class="project-desc">{{ projetoAtivo.descricao }}</p>
+      </div>
+    </div>
+
+  </div>
+</section>

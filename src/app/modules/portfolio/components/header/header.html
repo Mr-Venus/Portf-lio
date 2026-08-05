@@ -1,0 +1,27 @@
+
+
+<nav class="nav">
+  <div class="nav-content">
+    <div class="logo-content">
+      <img class="logo" (click)="mobileMenu()" src="Diogo-Logo.png" alt="Logo da página">
+    </div>
+
+    <ul class="nav-links">
+      @for(section of sections; track section.id){
+        <li><a class="nav-item" (click) = 'onNav(section)'> {{ section.titulo }}</a></li>
+      }
+    </ul>
+    
+    <div class="sociais-header" >
+      <a href="https://github.com/Mr-Venus" target="_blank">
+        <img src="sociais\gitHub.svg" alt="Git Hub Logo" />
+      </a>
+      <a href="https://www.linkedin.com/in/francisco-diogo/" target="_blank">
+        <img src="sociais\linkedin.svg" alt="LinkedIn Logo" />
+      </a>
+      <a href="https://www.instagram.com/diogo.lbz/" target="_blank">
+        <img src="sociais\instagram.svg" alt="Instagram Logo" />
+      </a>
+    </div>
+  </div>
+</nav>

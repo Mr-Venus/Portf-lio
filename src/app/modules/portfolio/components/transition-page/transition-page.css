@@ -1,0 +1,33 @@
+.transition{
+
+    position:fixed;
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:9999;
+}
+
+.transition-svg{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    overflow:visible;
+}
+
+
+@media (max-width: 768px) { 
+
+    .transition-svg {
+        transform: rotate(260deg);
+        scale: 2.2;
+    }
+
+}

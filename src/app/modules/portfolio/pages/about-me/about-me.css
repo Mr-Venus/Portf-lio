@@ -1,0 +1,189 @@
+:host {
+  min-width: 100%;
+  height: 100vh;
+  display: block;
+  position: absolute; 
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 5;
+  pointer-events: none;
+  align-items: center;
+
+}
+
+.about-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.about-text-container {
+    margin-left: 10%;
+    width: 500px;
+    transform: translateY(200px);
+    opacity: 0;
+
+    position: relative;
+
+    background-color: rgba(255, 255, 255, 0.03);
+   
+    padding: 22px;
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    box-shadow:
+      15px 15px 20px #fff,
+      -15px -15px 20px #fff,
+      inset -5px -5px 5px rgba(255,255,255,0.5),
+      inset 5px 5px 5px rgba(255,255,255,0.05);
+  
+    z-index: 2;
+
+}
+
+.light {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #fdffbee2 0%,
+    #ffb300cd 25%,
+    #ffd56bca 50%, 
+    #ffe69b6f 75%,
+    rgba(255, 255, 255, 0) 100%
+  );
+
+  filter: blur(60px);
+  top: 0;
+  left: 0;
+  position: absolute;
+
+  z-index: 1;
+}
+
+.about-text-container p {
+  color: var(--texto-secundario-tema-claro);
+  font-size: 1.1rem;
+  text-align: justify;
+  line-height: 1.6;
+  cursor: pointer;
+
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  z-index: 3;
+}
+
+.marcador {
+  padding: 2px;
+  border-radius: 5px;
+
+  transition: 1s ease;
+}
+
+.about-text-container:hover .marcador {
+  background-color: rgba(254, 229, 131, 0.53);
+  transition: 1.5s ease;
+}
+
+.about-text-container p:hover {
+  color: var(--texto-principal-tema-claro);
+
+  transition: 0.3s ease;
+}
+
+.technologys {
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
+  height: 30px;
+  left: 0;
+  bottom: -100%;
+  position: absolute;
+  color: var(--texto-principal-tema-claro);
+  overflow-x: hidden;
+
+  opacity: 0;
+  pointer-events: none;
+
+  z-index: 5;
+}
+
+.technologys::-webkit-scrollbar {
+  display: none;
+}
+
+.group {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: girar 30s linear infinite;
+}
+
+.itens {
+  width: 300px;
+  font-size: 12px;
+  text-align: center;
+  align-content: center;
+  padding: 0.5em;
+
+  cursor: pointer;
+}
+
+@keyframes girar {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.technologys:hover .group {
+  
+  animation-play-state: paused;
+}
+
+ /* ---- RESPONSIVIDADE ---- */
+
+      /* - - Celular - - */
+@media (max-width: 768px) {
+
+  .light{
+    display: none;
+  }
+
+  .nuven {
+    display: none;
+  }
+
+  .about-text-container{
+    background-color: #f5f5f5;
+    width: 90vw;
+    bottom: -17%;
+
+    margin-left: 5%;
+  }
+
+  .about-text-container p {
+    color: var(--texto-principal-tema-claro);
+    font-size: .97rem;
+  }
+
+  .technologys {
+    height: 50px;
+  }
+
+  .itens {
+    opacity: .9;
+    width: 200px;
+    font-size: 18px;
+
+  }
+
+}
