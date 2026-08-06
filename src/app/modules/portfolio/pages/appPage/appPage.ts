@@ -9,6 +9,7 @@ import { Footer } from '../../components/footer/footer';
 import { IntroPage } from '../../components/intro-page/intro-page';
 import { Section } from '../../interfaces/section';
 import { TransitionPage } from '../../components/transition-page/transition-page';
+import gsap from 'gsap';
 
 
 @Component({
@@ -63,8 +64,8 @@ export class AppPage implements OnInit {
 
   ngOnInit(): void {
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-
-    if(window.innerWidth <= 768) {this.scroll.isMobile = true;}
+    ScrollTrigger.normalizeScroll(true);
+    if(window.innerWidth <= 768) {this.scroll.isMobile = true}
 
     // configuração da timeline principal
     this.scroll.timelinePrincipal = gsap.timeline({
@@ -75,7 +76,8 @@ export class AppPage implements OnInit {
         scrub: 1,    
         pin: true,   
         anticipatePin: 1,
-        invalidateOnRefresh: true
+        invalidateOnRefresh: true,
+
       }
     });
 

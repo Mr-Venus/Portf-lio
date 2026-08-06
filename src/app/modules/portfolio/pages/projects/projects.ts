@@ -305,7 +305,7 @@ export class Projects implements OnInit {
     const tl = this.scroll.timelinePrincipal;
 
 
-    tl.to('.about-text-container, .cloud-about, .technologys, .perfil-image-div', {
+    tl.to('.about-text-container, .technologys, .perfil-image-div', {
       opacity: 0,
       y: -50, 
       pointerEvents: 'none',
@@ -371,7 +371,7 @@ export class Projects implements OnInit {
     tl.addLabel("projects")
 
 
-    tl.to({}, { duration: 4 }); 
+    tl.to({}, { duration: 8 }); 
 
     // Troca de projetos
     this.listaProjetos.forEach((projeto, index) => {
@@ -413,7 +413,7 @@ export class Projects implements OnInit {
         ease: 'power1.inOut'
       });
 
-      tl.to({}, { duration: 4 }); 
+      tl.to({}, { duration: 8 }); 
     });
 
     // Garantia para apresentar o 1 projeto se o usuario usar o scroll até o topo da pagina de projetos

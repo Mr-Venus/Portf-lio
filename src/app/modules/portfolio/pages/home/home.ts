@@ -123,12 +123,6 @@ export class Home implements OnInit {
 
     }, "<")
 
-    .to('.image-text, .image-text2, .background-text1, .background-text2', { 
-      y:0,
-      opacity: 1,
-      delay: 0.5,
-      duration: 1.7 })
-
   }
 
   private lineMobile(): void {
@@ -203,14 +197,10 @@ export class Home implements OnInit {
       })
 
       .to('.perfil-image-div', {
-
-        left: '50%',
-        top: '20%',
-        height: '360px',
-        scale: .47,
-
-        duration: 10,
-        ease: "power4.inOut"
+        y:-250,
+        scale:.47,
+        duration:10,
+        ease:"power4.inOut"
 
       })
 
@@ -241,11 +231,6 @@ export class Home implements OnInit {
 
       }, "<")
 
-      .to('.image-text, .image-text2, .background-text1, .background-text2', { 
-        y:0,
-        opacity: 1,
-        delay: 0.5,
-        duration: 1.7 })
 
       
   }

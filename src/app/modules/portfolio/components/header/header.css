@@ -135,7 +135,7 @@
 
  /* ---- RESPONSIVIDADE ---- */
 
-      /* - - Celular - - */
+      /* Celular  */
 @media (max-width: 768px) {
 
   .nav {
@@ -170,7 +170,7 @@
 
   .logo-content {
     width: 100vw;
-    height: 120px;
+    height: 90px;
 
     display: flex;
     justify-content: right;
@@ -181,10 +181,10 @@
 
   .logo {
     margin-top: 0px;
-    margin-right: 15px;
+    margin-right: 20px;
 
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     border-radius: 20px;
     pointer-events:auto;
 
@@ -234,7 +234,7 @@
     display: flex;
     justify-content: center;
     gap: 30px;
-    padding-bottom: 40px;
+    padding-bottom: 30%;
 
     opacity: .85;
   }
@@ -246,7 +246,4 @@
       opacity: 0;
       scale: 2.5;
     }
-
-    
-
 }

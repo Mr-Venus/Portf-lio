@@ -129,58 +129,6 @@
   filter: drop-shadow(0px 20px 30px rgba(from var(--cor-acento-1) r g b / 0.10));
 }
 
-.image-text {
-  position: absolute;
-  color: var(--texto-principal-tema-claro);
-  width: 100%;
-  font-size: 100px;
-  left: -5%;
-  letter-spacing: 12px;
-  top: -25%;
-  font-family: "Titan One", sans-serif;
-  font-weight: 400;
-  opacity: 0;
-  z-index: 2;
-}
-
-.image-text2 {
-  position: absolute;
-  color: var(--texto-principal-tema-claro);
-  font-size: 100px;
-  letter-spacing: 6px;
-  left: 30%;
-  bottom: -23%;
-  font-family: "Titan One", sans-serif;
-  font-weight: 400;
-  opacity: 0;
-  z-index: 4;
-}
-
-.background-text1 {
-  position: absolute;
-  width: 320px;
-  height: 20px;
-  top: -2%;
-  background-color: var(--cor-acento-1);
-  border-radius: 2px;
-  border: 2px solid rgba(255, 230, 150, .45);
-  opacity: 0;
-  z-index: 1;
-}
-
-.background-text2 {
-  position: absolute;
-  width: 190px;
-  height: 25px;
-  left: 25%;
-  bottom: -5%;
-  background-color: var(--cor-acento-1);
-  border-radius: 2px;
-  border: 2px solid rgba(255, 230, 150, .45);
-  opacity: 0;
-  z-index: 3;
-}
-
 
 .img-about {
   opacity: 0;
@@ -189,15 +137,12 @@
   z-index: 2;
 }
 
-.image-text, .image-text2, .background-text1, .background-text2 {
-  transform: translateY(50px);
-}
 
 
  /* ---- RESPONSIVIDADE ---- */
 
       /* - - Celular - - */
-@media (max-width: 768px) {
+/* @media (min-width:361px) and (max-width: 768px) {
 
   .home-section {
     display: flex;
@@ -205,6 +150,7 @@
     width: 100vw;
     height: 100vh;
     padding-top: 10px; 
+
   }
 
   .home-title, .home-subtitle{
@@ -246,35 +192,78 @@
     left: auto;
     width: 600px;
     height: 600px;
+    filter: none;
+
+    contain:paint;
 
   }
 
-    
-  .image-text {
+  .lane-content {
+    background: var(--bg-principal-tema-escuro);
+    white-space:nowrap;
+
+  }
+
+} */
+
+/* celular pequeno */
+
+@media (max-width: 768px) {
+
+  .home-section {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 5px; 
+  }
+
+  .home-title, .home-subtitle{
+    top: 10%;
+  }
+
+  .home-title {
+    font-size: 2.3rem;
+  }
+
+  .home-subtitle {
+    width: 80%;
+    font-size: .9rem;
+  }
+
+  .home-subtitle i {
+    color: var(--cor-acento-1);
+    opacity: .89;
+    font-size: .69rem;
+    letter-spacing: 2px;
+  }
+  
+  .perfil-image-div {
     width: 100%;
-    font-size: 130px;
+    height: 90%;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    position: absolute;
+    top: auto;
+  }
+
+  .perfil-image {
+    position: absolute;
+    top: auto;
+    bottom: 0;
     left: auto;
-    letter-spacing: 12px;
-    top: -95%;
-  }
+    width: 500px;
+    height: 500px;
 
-  .image-text2 {
-    font-size: 130px;
-    letter-spacing: 10px;
-    left: auto;
-  }
+    contain:paint;
+    filter: none;
 
-  .background-text1 {
-    width: 400px;
-    height: 30px;
-    top: -65%;
   }
-
-  .background-text2 {
-    width: 190px;
-    height: 30px;
-    left: 25%;
-    bottom: -5%;
+  .home-lane {
+    scale: .69;
   }
 
   .lane-content {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy} from '@angular/core';
 import { ScrollGsap } from '../../../../services/scroll-gsap';
 import VanillaTilt from 'vanilla-tilt';
 import gsap from 'gsap';
@@ -69,24 +69,24 @@ export class AboutMe implements OnInit {
 
   private lineMobile(): void {
     const mobileTl = this.scroll.timelinePrincipal;
-
+    
     // MOBILE TIMELINE
     mobileTl 
     
     .to('.about-text-container', {
-      y: 0,
-      left: '0px',            
-      opacity: 1,  
-      scale: .9,
-      pointerEvents: 'auto',
-      stagger: 0.15,       
-      duration: 4,
-      delay: 0.8
-    }) 
+
+      x:0,
+      y:0,
+      opacity:1,
+      duration:4,
+      ease:"power4.inOut"
+
+  })
 
     .to('.technologys', {
+      y: 0,
       opacity: 1,
-      bottom: '0px',
+      bottom: '6%',
       scale: .8,
       pointerEvents: 'auto',
       duration: 4,

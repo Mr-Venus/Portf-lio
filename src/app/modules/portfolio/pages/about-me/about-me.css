@@ -152,7 +152,7 @@
  /* ---- RESPONSIVIDADE ---- */
 
       /* - - Celular - - */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
 
   .light{
     display: none;
@@ -183,6 +183,54 @@
     opacity: .9;
     width: 200px;
     font-size: 18px;
+
+  }
+
+} */
+
+
+      /*Celular Pequeno */
+@media (max-width: 768px) {
+
+  .light{
+    display: none;
+  }
+
+  .nuven {
+    display: none;
+  }
+
+  .about-text-container{
+    background-color: #f5f5f5f1;
+    width: 90vw;
+    bottom: -14%;
+    transform:
+      translateY(200px);
+     box-shadow:
+
+      0 18px 40px rgb(249, 249, 249),
+
+      0 0 10px rgb(255, 255, 255);
+
+    margin-left: 5%;
+  }
+
+  .about-text-container p {
+    color: var(--texto-principal-tema-claro);
+    font-size: .83rem;
+  }
+
+  .technologys {
+    height: 45px;
+    bottom: 0;
+    transform:
+    translateY(120px);
+  }
+
+  .itens {
+    opacity: .9;
+    width: 200px;
+    font-size: 15px;
 
   }
 
