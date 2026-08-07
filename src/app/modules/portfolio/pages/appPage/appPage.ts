@@ -10,6 +10,8 @@ import { IntroPage } from '../../components/intro-page/intro-page';
 import { Section } from '../../interfaces/section';
 import { TransitionPage } from '../../components/transition-page/transition-page';
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
 
 @Component({
@@ -20,7 +22,9 @@ import gsap from 'gsap';
 })
 export class AppPage implements OnInit {
 
-  constructor(private scroll: ScrollGsap) {}
+  constructor(private scroll: ScrollGsap) {
+    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+  }
 
   // Atribuição das sections 
   public sections: Section[] = [
