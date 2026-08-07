@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 
 import gsap from "gsap";
-import { ScrollToPlugin } from 'gsap/all';
-import { ScrollTrigger } from 'gsap/all';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
