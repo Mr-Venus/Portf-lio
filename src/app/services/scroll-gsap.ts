@@ -4,7 +4,8 @@ import gsap from "gsap";
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
+const plugins = [ScrollTrigger, ScrollToPlugin];
+gsap.registerPlugin(...plugins);
 
 @Injectable({
     providedIn: 'root'
@@ -13,9 +14,8 @@ export class ScrollGsap {
 
     constructor() {
         if (typeof window !== 'undefined') {
-            (window as any).ScrollTrigger = ScrollTrigger;
+            plugins.forEach(plugin => gsap.registerPlugin(plugin));
         }
-        gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
     }
 
     // Declaração das timelines

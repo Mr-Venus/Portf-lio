@@ -13,7 +13,8 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
-
+const plugins = [ScrollTrigger, ScrollToPlugin];
+gsap.registerPlugin(...plugins);
 @Component({
   selector: 'app-app',
   imports: [AboutMe, Header, Home, Projects, Footer, IntroPage, TransitionPage],
@@ -23,7 +24,7 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 export class AppPage implements OnInit {
 
   constructor(private scroll: ScrollGsap) {
-    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+    gsap.registerPlugin(...plugins);
   }
 
   // Atribuição das sections 
@@ -67,7 +68,7 @@ export class AppPage implements OnInit {
   };
 
   ngOnInit(): void {
-    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+    gsap.registerPlugin(...plugins);
     ScrollTrigger.normalizeScroll(true);
     if(window.innerWidth <= 768) {this.scroll.isMobile = true}
 
