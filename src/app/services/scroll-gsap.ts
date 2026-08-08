@@ -4,19 +4,14 @@ import gsap from "gsap";
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-const plugins = [ScrollTrigger, ScrollToPlugin];
-gsap.registerPlugin(...plugins);
+gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
 @Injectable({
     providedIn: 'root'
 })
 export class ScrollGsap {
 
-    constructor() {
-        if (typeof window !== 'undefined') {
-            plugins.forEach(plugin => gsap.registerPlugin(plugin));
-        }
-    }
+    constructor() {}
 
     // Declaração das timelines
     public timelinePrincipal: any;
