@@ -11,6 +11,13 @@ gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 })
 export class ScrollGsap {
 
+    constructor() {
+        if (typeof window !== 'undefined') {
+            (window as any).ScrollTrigger = ScrollTrigger;
+        }
+        gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+    }
+
     // Declaração das timelines
     public timelinePrincipal: any;
     public timelineTransition: any;
