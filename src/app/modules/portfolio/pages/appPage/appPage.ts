@@ -9,11 +9,10 @@ import { Footer } from '../../components/footer/footer';
 import { IntroPage } from '../../components/intro-page/intro-page';
 import { Section } from '../../interfaces/section';
 import { TransitionPage } from '../../components/transition-page/transition-page';
-import gsap from 'gsap';
-import ScrollToPlugin from "gsap/ScrollToPlugin";
-import ScrollTrigger from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
+declare const gsap: any;
+declare const ScrollTrigger: any;
+
 @Component({
   selector: 'app-app',
   imports: [AboutMe, Header, Home, Projects, Footer, IntroPage, TransitionPage],
