@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ScrollGsap } from '../../../../services/scroll-gsap';
-import VanillaTilt from 'vanilla-tilt';
-import { delay } from 'rxjs';
+
 
 
 @Component({
